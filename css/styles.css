@@ -5,20 +5,35 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin-bottom: 10px;
 }
 
 .server-item{
     border: red 1px solid;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .task-list{
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin-bottom: 10px;
 }
 
 .task-item{
     border: red 1px solid;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label{
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+button{
+    margin-bottom: 10px;
 }
