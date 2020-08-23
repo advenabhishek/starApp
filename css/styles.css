@@ -1,0 +1,24 @@
+.main{
+    margin: 10px;
+}
+.server-list{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.server-item{
+    border: red 1px solid;
+    padding: 10px;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.task-item{
+    border: red 1px solid;
+    padding: 10px;
+}
