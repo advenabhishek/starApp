@@ -12,7 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     //ADD TASK
     let addTaskButton = document.getElementById('add-task-button')
     addTaskButton.addEventListener('click', () => {
-        taskList.addTask()
+        let inputTask = document.getElementById('number-of-task')
+        let value = inputTask.value
+        // if (value > 500) {
+        //     value = 500
+        //     inputTask.value = 500
+        // } else if(value < 1){
+        //     value = 1
+        //     inputTask.value = 1
+        // }
+        for (let i = 0; i < value; i++)
+            taskList.addTask()
     })
 
 
