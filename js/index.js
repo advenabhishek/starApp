@@ -14,22 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     addTaskButton.addEventListener('click', () => {
         let inputTask = document.getElementById('number-of-task')
         let value = inputTask.value
-        // if (value > 500) {
-        //     value = 500
-        //     inputTask.value = 500
-        // } else if(value < 1){
-        //     value = 1
-        //     inputTask.value = 1
-        // }
         for (let i = 0; i < value; i++)
             taskList.addTask()
     })
 
-
     //worker
     setInterval(() => {
-        //delete completed task from list? Not clear.
-
         let freeServerList = serverList.serverList.filter(item => {
             return item.status == false
         })

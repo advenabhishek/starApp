@@ -9,7 +9,7 @@
 }
 
 .server-item{
-    border: red 1px solid;
+    border: purple 1px solid;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -23,10 +23,20 @@
 }
 
 .task-item{
-    border: red 1px solid;
+    border: purple 1px solid;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+
+    background: linear-gradient(to right, purple 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 20s ease-out;
+}
+.active{
+    /* color:white; */
+    background-position: left bottom;
 }
 
 .label{
@@ -34,6 +44,22 @@
     margin-bottom: 20px;
 }
 
+
 button{
-    margin-bottom: 10px;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid purple;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:purple;
+    text-align:center;
+    transition: all 0.2s;
+}
+button:hover{
+    color:white;
+    background-color:purple;
 }

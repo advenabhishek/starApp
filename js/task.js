@@ -1,7 +1,8 @@
 class Task {
     constructor(taskList) {
         console.log({taskList})
-        this.id = new Date().getTime()
+        // this.id = new Date().getTime() + 
+        this.id = Math.floor(10000000000 + Math.random() * 90000000000)
         this.status = false
         let div = document.createElement('div')
         div.className = 'task-item'
@@ -32,6 +33,8 @@ class Task {
         console.log(this, server)
         if (server.status == false) {
             console.log(`starting task ${this.id} on server ${server.id}`)
+            console.log('DOM:::::',this.DOM)
+            this.DOM.classList.add("active");
             this.status = true
             server.status = true
             server.startedAt = new Date().getTime()
