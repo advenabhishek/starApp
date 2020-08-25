@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(openTaskList.length, freeServerList.length)
             let task = openTaskList.shift()
             let server = freeServerList.pop()
-            task.start(server)
+            // task.start(server)
+            server.executeTask(task)
         }
     }, 2000)
 });

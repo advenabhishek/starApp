@@ -13,6 +13,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    border-radius: 3px;
 }
 
 .task-list{
@@ -33,6 +34,7 @@
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 20s linear;
+    border-radius: 3px;
 }
 .active{
     /* color:white; */
@@ -58,8 +60,10 @@ button{
     color:purple;
     text-align:center;
     transition: all 0.2s;
+    background-color: #f0e4f0f7;
+    border-radius: 3px;
 }
 button:hover{
-    color:white;
+    color:#f0e4f0f7;
     background-color:purple;
 }

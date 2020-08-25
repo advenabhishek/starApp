@@ -29,5 +29,25 @@ class Server {
         })
     }
 
+    executeTask(task){
+        if (this.status == false) {
+            task.DOM.classList.add("active");
+            task.status = true
+            this.status = true
+            this.startedAt = new Date().getTime()
+            // remove the delete button
+            document.getElementById('delete-button-' + task.id).style.display = 'none'
+            setTimeout(() => {
+                task.status = 'completed'
+                this.status = false
+                this.startedAt = null
+                //should we remove the task after completion? Not clear.
+            }, 20000)
+            return true
+        }
+        console.log(`could not start ${task.id} on server ${this.id} as the server was busy`)
+        return false
+    }
+
 }
 
