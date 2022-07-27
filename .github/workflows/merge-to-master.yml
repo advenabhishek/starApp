@@ -1,0 +1,17 @@
+name: Merge to master
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'branch'     
+        required: true
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.event.inputs.branch }}
+          target_branch: 'master'
+          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
